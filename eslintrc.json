@@ -1,0 +1,11 @@
+{
+  "extends": ["next/core-web-vitals", "next/typescript"],
+  "overrides": [
+    {
+      "files": ["src/utils/firebase.ts"],
+      "rules": {
+        "react/no-is-mounted": "off"
+      }
+    }
+  ]
+}
