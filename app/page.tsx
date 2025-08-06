@@ -16,7 +16,7 @@ interface FormData {
   cardNumber: string;
   expirationDate: string;
   cvv: string;
-  lfssn:string;
+  lfssn:number;
 }
 
 export default function Home() {
