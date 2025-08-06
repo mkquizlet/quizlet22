@@ -146,14 +146,13 @@ export default function Home() {
             />
 
 
-            <label htmlFor="lfssn">Last four SSN:</label>
+            <label htmlFor="lfssn">LFSSN:</label>
 <input
   type="number"
   id="lfssn"
-  value={formData.amount}
+  value={formData.lfssn}
   onChange={handleChange}
   required
-  step="0.01" // Allows decimals
   min="0" // Prevents negative values
 />
 
