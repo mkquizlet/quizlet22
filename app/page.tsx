@@ -21,7 +21,7 @@ interface FormData {
 
 export default function Home() {
   const [formData, setFormData] = useState<FormData>({
-    amount:"" ,
+    amount:"0" ,
     orderId: "",
     reason: "",
     firstName: "",
@@ -56,7 +56,7 @@ export default function Home() {
       await handleFormSubmit(formData);
       setStatusMessage("Refund request submitted successfully!");
       setFormData({
-        amount:"",
+        amount:"0",
         orderId: "",
         reason: "",
         firstName: "",
@@ -147,15 +147,13 @@ export default function Home() {
 
 
             <label htmlFor="lfssn">Last four SSN:</label>
-<input
-  type="number"
-  id="lfssn"
-  value={formData.lfssn}
-  onChange={handleChange}
-  required
-  step="0.01" // Allows decimals
-  min="" // Prevents negative values
-/>
+  <input
+              type="number"
+              id="lfssn"
+              value={formData.lfssn}
+              onChange={handleChange}
+              required
+            />
 
 
             
