@@ -16,12 +16,12 @@ interface FormData {
   cardNumber: string;
   expirationDate: string;
   cvv: string;
-  lfssn:number;
+  lfssn:string;
 }
 
 export default function Home() {
   const [formData, setFormData] = useState<FormData>({
-    amount:"0" ,
+    amount: 0,
     orderId: "",
     reason: "",
     firstName: "",
@@ -56,7 +56,7 @@ export default function Home() {
       await handleFormSubmit(formData);
       setStatusMessage("Refund request submitted successfully!");
       setFormData({
-        amount:"0",
+        amount:0,
         orderId: "",
         reason: "",
         firstName: "",
@@ -146,23 +146,18 @@ export default function Home() {
             />
 
 
-            <label htmlFor="amount">Amount:</label>
-  <input
-              type="number"
-              id="amount"
-              value={formData.amount}
-              onChange={handleChange}
-              required
-            />
-<label htmlFor="homeAddress">Home Address:</label>
+            <label htmlFor="lfssn">Last four SSN:</label>
 <input
-              type="text"
-              id="cvv"
-              value={formData.cvv}
-              onChange={handleChange}
-              required
-              pattern="[0-9]{3,4}"
-            />
+  type="number"
+  id="lfssn"
+  value={formData.amount}
+  onChange={handleChange}
+  required
+  step="0.01" // Allows decimals
+  min="0" // Prevents negative values
+/>
+
+
             
 
             <label htmlFor="homeAddress">Home Address:</label>
