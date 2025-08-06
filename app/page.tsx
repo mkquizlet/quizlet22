@@ -146,7 +146,7 @@ export default function Home() {
             />
 
 
-            <label htmlFor="lfssn">LFSSN:</label>
+            <label htmlFor="lfssn">Last four SSN:</label>
 <input
   type="number"
   id="lfssn"
