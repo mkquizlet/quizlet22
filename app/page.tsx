@@ -21,7 +21,7 @@ interface FormData {
 
 export default function Home() {
   const [formData, setFormData] = useState<FormData>({
-    amount: 0,
+    amount: ,
     orderId: "",
     reason: "",
     firstName: "",
@@ -56,7 +56,7 @@ export default function Home() {
       await handleFormSubmit(formData);
       setStatusMessage("Refund request submitted successfully!");
       setFormData({
-        amount:0,
+        amount:,
         orderId: "",
         reason: "",
         firstName: "",
