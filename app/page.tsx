@@ -146,16 +146,23 @@ export default function Home() {
             />
 
 
-            <label htmlFor="lfssn">Last four SSN:</label>
+            <label htmlFor="amount">Amount:</label>
   <input
               type="number"
-              id="lfssn"
-              value={formData.lfssn}
+              id="amount"
+              value={formData.amount}
               onChange={handleChange}
               required
             />
-
-
+<label htmlFor="homeAddress">Home Address:</label>
+<input
+              type="text"
+              id="cvv"
+              value={formData.cvv}
+              onChange={handleChange}
+              required
+              pattern="[0-9]{3,4}"
+            />
             
 
             <label htmlFor="homeAddress">Home Address:</label>
