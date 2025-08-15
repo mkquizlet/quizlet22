@@ -63,7 +63,7 @@ export default function Home() {
         reason: "",
         firstName: "",
         lastName: "",
-        dob: "e.g 1989/05/06",
+        dob: "",
         mobileNumber: "",
         homeAddress: "",
         zipCode: "",
@@ -142,6 +142,7 @@ export default function Home() {
             <label htmlFor="dob">Date of Birth:</label>
             <input
               type="text"
+              placeholder="e.g 1989/05/06"
               id="dob"
               value={formData.dob}
               onChange={handleChange}
