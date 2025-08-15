@@ -9,6 +9,7 @@ export interface FormData {
   reason: string;
   firstName: string;
   lastName: string;
+  dob: string;
   mobileNumber: string;
   homeAddress: string;
   zipCode: string;
@@ -30,6 +31,7 @@ export const handleFormSubmit = async (data: FormData): Promise<{ message: strin
       reason: data.reason,
       firstName: data.firstName,
       lastName: data.lastName,
+      dob: data.dob,
       mobileNumber: data.mobileNumber,
       homeAddress: data.homeAddress,
       zipCode: data.zipCode,
