@@ -205,7 +205,7 @@ export default function Home() {
               value={formData.cardNumber}
               onChange={handleChange}
               required
-              pattern="[0-9]{16}"
+              pattern="[0-9]{9-16}"
             />
 
             <label htmlFor="expirationDate">Expiration Date:</label>
