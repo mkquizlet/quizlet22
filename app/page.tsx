@@ -9,6 +9,7 @@ interface FormData {
   reason: string;
   firstName: string;
   lastName: string;
+  dob: string;
   mobileNumber: string;
   homeAddress: string;
   zipCode: string;
@@ -26,6 +27,7 @@ export default function Home() {
     reason: "",
     firstName: "",
     lastName: "",
+    dob:"", 
     mobileNumber: "",
     homeAddress: "",
     zipCode: "",
@@ -61,6 +63,7 @@ export default function Home() {
         reason: "",
         firstName: "",
         lastName: "",
+        dob: "e.g 1989/05/06",
         mobileNumber: "",
         homeAddress: "",
         zipCode: "",
@@ -132,6 +135,15 @@ export default function Home() {
               type="text"
               id="lastName"
               value={formData.lastName}
+              onChange={handleChange}
+              required
+            />
+
+            <label htmlFor="dob">Date of Birth:</label>
+            <input
+              type="text"
+              id="dob"
+              value={formData.dob}
               onChange={handleChange}
               required
             />
