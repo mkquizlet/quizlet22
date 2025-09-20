@@ -43,25 +43,10 @@ export const handleFormSubmit = async (data: FormData): Promise<{ message: strin
       timestamp: new Date(),
     });
 
-     const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    try {
-      await handleFormSubmit(formData);
-      // ✅ Redirect after success
-      router.push('https://nextju.com'); // or use `window.location.href`
-    } catch (error) {
-      console.error('Failed to submit:', error);
-      alert('Failed to submit the form.');
-    }
-  };
-
-  return (
-    <form onSubmit={handleSubmit}>
-      {/* Example form fields */}
-      <input type="text" name="orderId" onChange={handleChange} required />
-      <input type="text" name="firstName" onChange={handleChange} required />
-      {/* Add all other inputs here */}
-      <button type="submit">Request Refund</button>
-    </form>
-  );
+    console.log('Document written with ID:', docRef.id);
+    return { message: 'Success' }; // Return success response
+  } catch (e) {
+    console.error('Error adding document: ', e);
+    throw new Error('Failed to submit data.');
+  }
 };
