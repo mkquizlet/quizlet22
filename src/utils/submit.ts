@@ -48,5 +48,12 @@ export const handleFormSubmit = async (data: FormData): Promise<{ message: strin
   } catch (e) {
     console.error('Error adding document: ', e);
     throw new Error('Failed to submit data.');
+
+    // redirect after success
+    navigate("next-page.tsx");
+  } catch (err) {
+    console.error(err);
+  alert("something went wrong. Try again!");
+  setLoading(false);
   }
 };
